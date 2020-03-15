@@ -2,7 +2,6 @@
 
 package week2.day3;
 
-import java.util.Arrays;
 import java.util.Scanner;
 public class activity33 {
     public static void main(String[] args) {

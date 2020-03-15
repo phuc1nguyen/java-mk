@@ -20,7 +20,7 @@ public class draft2 {
             System.out.print("Nhap so thuc thu hai: ");
             float b = sc.nextFloat();
             System.out.print("Nhap vao ban phim 1 trong 4 toan tu (+, -, *, /) hoac nhap (T, t) de ket thuc chuong trinh: ");
-            s = sc.next();
+            s = sc.nextLine();
             if (s.equals("+")) System.out.println("a + b = " + (a+b));
             else if (s.equals("-")) System.out.println("a - b = " + (a-b));
             else if (s.equals("*")) System.out.println("a x b = " + (a*b));

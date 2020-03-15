@@ -7,7 +7,6 @@
 
 package week2.tulam;
 
-import java.util.Arrays;
 import java.util.Scanner;
 public class draft2 {
     public static void main(String[] args) {

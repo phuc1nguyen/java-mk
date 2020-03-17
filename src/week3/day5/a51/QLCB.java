@@ -1,6 +1,6 @@
 //// Day la mot doi tuong chuc nang
 //
-//package week3.day5;
+//package week3.day5.a51;
 //
 //public class QLCB implements QLCBinterface {
 //

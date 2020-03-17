@@ -1,4 +1,4 @@
-package week2.day4;
+package week2.day4.a41;
 
 public class Rectangle {
     private float chieuDai;

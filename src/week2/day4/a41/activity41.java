@@ -1,6 +1,6 @@
 /* Write program to calculate area and perimeter of a rectangle */
 
-package week2.day4;
+package week2.day4.a41;
 
 import java.util.Scanner;
 public class activity41 {

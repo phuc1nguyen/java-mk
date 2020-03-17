@@ -9,14 +9,29 @@ public class activity34 {
         Scanner sc = new Scanner(System.in);
         System.out.print("Nhap chieu dai mang so nguyen: ");
         int n = sc.nextInt();   // arr.length = n;
+        while (n<2) {
+            System.out.print("Moi nhap lai chieu dai toi thieu la 2: ");
+            n = sc.nextInt();
+        }
         int[] arr = new int[n];
-        System.out.println("Nhap mang so nguyen co it nhat 1 phan tu bi trung: ");
+
+        //Input
+        System.out.println("Nhap mang so nguyen: ");
         for (int i=0; i<arr.length; ++i) {
             arr[i] = sc.nextInt();
         }
+        /*System.out.print("Mang vua nhap la: ");
+        System.out.println(Arrays.toString(arr));*/
 
+        System.out.println("Chieu dai moi cua mang la: " + array_sort(arr));
+    }
 
-        // In mang cuoi cung
-//        System.out.println(Arrays.toString(arr));
+    public static int array_sort(int[] nums) {
+        int temp = 1;
+        for (int i=1; i<nums.length; ++i) {
+            if (nums[i] != nums[temp-1])
+                nums[temp++] = nums[i];
+        }
+        return temp;
     }
 }

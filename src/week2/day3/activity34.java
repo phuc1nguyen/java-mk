@@ -2,7 +2,6 @@
 
 package week2.day3;
 
-import java.util.Arrays;
 import java.util.Scanner;
 public class activity34 {
     public static void main(String[] args) {
@@ -20,8 +19,6 @@ public class activity34 {
         for (int i=0; i<arr.length; ++i) {
             arr[i] = sc.nextInt();
         }
-        /*System.out.print("Mang vua nhap la: ");
-        System.out.println(Arrays.toString(arr));*/
 
         System.out.println("Chieu dai moi cua mang la: " + array_sort(arr));
     }

@@ -16,7 +16,8 @@ public class javaoop {
             studentArray[i].mssv = items[1];
             studentArray[i].birthday = items[2];
             studentArray[i].gender = items[3];
-            studentArray[i].gpa = Float.valueOf(items[4]);
+            float phuc = sc.nextFloat();
+            studentArray[i].setGpa(phuc);
 
             System.out.println("Thong tin sinh vien la: " + studentArray[i].toString());
         }

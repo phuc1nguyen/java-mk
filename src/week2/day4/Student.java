@@ -1,10 +1,10 @@
 package week2.day4;
 
 public class Student {
-    private String name;
-    private String mssv;
-    private String birthday;
-    private String gender;
+    String name;
+    String mssv;
+    String birthday;
+    String gender;
     private float gpa;
 
     public String getName() {

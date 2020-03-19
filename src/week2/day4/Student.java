@@ -1,7 +1,7 @@
 package week2.day4;
 
 public class Student {
-    String name;
+    private String name;
     String mssv;
     String birthday;
     String gender;

@@ -9,14 +9,14 @@ public class activity41 {
         Rectangle rec = new Rectangle();
 
         System.out.print("Nhap chieu dai hinh chu nhat: ");
-        float cd = sc.nextFloat();
-        rec.setChieuDai(cd);
+        float a = sc.nextFloat();
+        rec.setLength(a);
         System.out.print("Nhap chieu rong hinh chu nhat: ");
-        float cr = sc.nextFloat();
-        rec.setChieuRong(cr);
+        float b = sc.nextFloat();
+        rec.setWidth(b);
 
         System.out.println(rec.toString());
-        System.out.println("Dien tich hinh chu nhat: " + rec.getChuVi());
-        System.out.println("Chu vi hinh chu nhat: " + rec.getDienTich());
+        System.out.println("Dien tich hinh chu nhat: " + rec.chuVi(a, b));
+        System.out.println("Chu vi hinh chu nhat: " + rec.dienTich(a, b));
     }
 }

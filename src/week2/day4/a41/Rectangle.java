@@ -1,37 +1,35 @@
 package week2.day4.a41;
 
 public class Rectangle {
-    private float chieuDai;
-    private float chieuRong;
-    private float chuVi;
-    private float dienTich;
+    private float length;
+    private float width;
 
-    public float getChieuDai() {
-        return chieuDai;
+    public float getLength() {
+        return length;
     }
 
-    public void setChieuDai(float chieuDai) {
-        this.chieuDai = chieuDai;
+    public void setLength(float length) {
+        this.length = length;
     }
 
-    public float getChieuRong() {
-        return chieuRong;
+    public float getWidth() {
+        return width;
     }
 
-    public void setChieuRong(float chieuRong) {
-        this.chieuRong = chieuRong;
+    public void setWidth(float width) {
+        this.width = width;
     }
 
-    public float getChuVi() {
-        return (this.chieuDai+this.chieuRong)*2;
+    public float chuVi(float length, float width) {     // Day moi la phuong thuc/procedure, truoc lam chua chuan
+        return (length+width)*2;
     }
 
-    public float getDienTich() {
-        return this.chieuDai*this.chieuRong;
+    public float dienTich(float length, float width) {
+        return length*width;
     }
 
     @Override
     public String toString() {
-        return "Rectangle: Chieu dai va chieu rong lan luot la " + chieuDai + " va " + chieuRong;
+        return "Rectangle: Chieu dai va chieu rong lan luot la " + this.length + " va " + this.width;
     }
 }

@@ -20,11 +20,11 @@ public class Rectangle {
         this.width = width;
     }
 
-    public float chuVi(float length, float width) {     // Day moi la phuong thuc/procedure, truoc lam chua chuan
+    public float chuVi(float length, float width) {     // Day moi la phuong thuc/procedure tinh chu vi
         return (length+width)*2;
     }
 
-    public float dienTich(float length, float width) {
+    public float dienTich(float length, float width) {      // Phuong thuc tinh dien tich
         return length*width;
     }
 

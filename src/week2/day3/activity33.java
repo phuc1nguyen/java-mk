@@ -6,7 +6,6 @@ import java.util.Scanner;
 public class activity33 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String longest = "";
         String bai33 = "";
         String[] arrBai33;
 
@@ -15,6 +14,7 @@ public class activity33 {
         arrBai33 = bai33.split(" ");
         System.out.println(arrBai33.length);
 
+        String longest = "";
         for (int i=0; i < arrBai33.length; ++i) {
             String temp = arrBai33[i];
             if (temp.length() > longest.length()) {

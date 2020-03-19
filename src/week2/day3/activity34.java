@@ -14,7 +14,6 @@ public class activity34 {
         }
         int[] arr = new int[n];
 
-        //Input
         System.out.println("Nhap mang so nguyen: ");
         for (int i=0; i<arr.length; ++i) {
             arr[i] = sc.nextInt();
@@ -25,7 +24,7 @@ public class activity34 {
 
     public static int array_sort(int[] nums) {
         int temp = 1;
-        for (int i=1; i<nums.length; ++i) {
+        for (int i=1; i<nums.length; ++i) {     //Vong for nay chua hieu
             if (nums[i] != nums[temp-1])
                 nums[temp++] = nums[i];
         }

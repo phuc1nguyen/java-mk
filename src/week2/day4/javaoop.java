@@ -4,7 +4,8 @@ import java.util.Scanner;
 public class javaoop {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-        Student[] studentArray = new Student[2];        //Khai bao kieu du lieu doi tuong Student cho mang
+        Student[] studentArray = new Student[2];        //Khoi tao mang lieu doi tuong studentArray cho mang
+                                                        //Tao mang doi tuong tu class
         for (int i=0; i<2; ++i) {
             System.out.println("Nhap sinh vien thu " + (i+1));
             String line = sc.nextLine();
@@ -12,8 +13,8 @@ public class javaoop {
 
             studentArray[i] = new Student();        //Khai bao kieu du lieu doi tuong cho phan tu cua mang
 
-            studentArray[i].setName(items[0]);
-            studentArray[i].mssv = items[1];
+            studentArray[i].name = items[0];
+            studentArray[i].setMssv(items[1]);
             studentArray[i].birthday = items[2];
             studentArray[i].gender = items[3];
             studentArray[i].setGpa(Float.valueOf(items[4]));
@@ -25,7 +26,7 @@ public class javaoop {
         String mssv = sc.nextLine();
 
         for (Student st : studentArray){        // Gap th nao co mssv giong minh vua nhap thi in ra
-            if(st.mssv.equals(mssv)){
+            if(st.getMssv().equals(mssv)){
                 System.out.println(st.toString());
                 break;
             }

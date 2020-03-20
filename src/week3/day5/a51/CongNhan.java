@@ -3,6 +3,9 @@ package week3.day5.a51;
 public class CongNhan extends CanBo {
     private int level;
 
+    public CongNhan() {
+    }
+
     public int getLevel() {
         return level;
     }

@@ -6,6 +6,9 @@ public class CanBo {
     private String gender;
     private String address;
 
+    public CanBo() {            // No-args constructor, neu ko khai bao constructor thi chuong trinh cung se tao ra default constructor khi tao object cua mot class
+    }
+
     public String getName() {
         return name;
     }
@@ -38,9 +41,4 @@ public class CanBo {
         this.address = address;
     }
 
-    @Override
-    public String toString() {
-        return "Canbo: {Ten " + this.name + ", tuoi " + this.age + ", gioi tinh "
-                + this.gender + ", dia chi " + this.address + "}";
-    }
 }

@@ -3,9 +3,10 @@ package week2.day4.a41;
 public class Rectangle {
     private float length;
     private float width;
-    private float chuVi;
 
-    public Rectangle() {
+    public Rectangle(float length, float width) {       //Constructor
+        this.length = length;
+        this.width = width;
     }
 
     public float getLength() {
@@ -24,11 +25,11 @@ public class Rectangle {
         this.width = width;
     }
 
-    public float chuVi(float length, float width) {     // Day moi la phuong thuc/procedure tinh chu vi
+    public float chuVi(float length, float width) {     //Day moi la phuong thuc/procedure tinh chu vi
         return (length+width)*2;
     }
 
-    public float dienTich(float length, float width) {      // Phuong thuc tinh dien tich
+    public float dienTich(float length, float width) {      //Phuong thuc tinh dien tich
         return length*width;
     }
 

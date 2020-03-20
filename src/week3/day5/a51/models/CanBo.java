@@ -1,4 +1,4 @@
-package week3.day5.a51;
+package week3.day5.a51.models;
 
 public class CanBo {
     private String name;

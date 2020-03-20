@@ -1,7 +1,9 @@
 package week3.day5.a51;
 
-public interface QLCBInterface {
-    CanBo addCanBo(String name, int age, String gender, String add);
-    CanBo searchByName(String name, CanBo[] cbList);
-    void displayCanBoList(CanBo[] cbList);
+import week3.day5.a51.models.CanBo;
+
+public abstract class QLCBInterface {
+    abstract CanBo addCanBo(String name, int age, String gender, String add);
+    abstract CanBo searchByName(String name, CanBo[] cbList);
+    abstract void displayCanBoList(CanBo[] cbList);      //Tai soa o day kieu tra ve void ma ko phai la CanBo
 }

@@ -1,13 +1,13 @@
 package week2.day4.a42;
 
 public class News {
-    public News() {
-
-    }
     private String identity;
     private String url;
     private String title;
     private int createdTime;
+
+    public News() {
+    }
 
     public String getIdentity() {
         return identity;

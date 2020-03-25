@@ -11,6 +11,8 @@ public class Application {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        //Cong nhan cho truoc
+
 
         System.out.println("1. Them can bo");
         System.out.println("2. Tim kiem theo ho ten");
@@ -21,7 +23,7 @@ public class Application {
             System.out.print("Can bo cua ban co 3 loai: Cong nhan, Ky su, Nhan vien. \nLua chon hanh dong 1-3: ");
             while (!sc.hasNextInt()) {
                 System.out.print("Sai cu phap. Vui long nhap lai: ");
-                sc.next();
+                sc.nextLine();
             }
             i = sc.nextInt();
         } while (i<1 || i>3);

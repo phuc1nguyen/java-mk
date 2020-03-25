@@ -22,9 +22,9 @@ public class activity34 {
         System.out.println("Chieu dai moi cua mang la: " + array_sort(arr));
     }
 
-    public static int array_sort(int[] nums) {
+    public static int array_sort(int[] nums) {              //??
         int temp = 1;
-        for (int i=1; i<nums.length; ++i) {     //Vong for nay chua hieu
+        for (int i=1; i<nums.length; ++i) {
             if (nums[i] != nums[temp-1])
                 nums[temp++] = nums[i];
         }

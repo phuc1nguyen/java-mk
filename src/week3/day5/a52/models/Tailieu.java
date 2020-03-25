@@ -31,4 +31,13 @@ public class Tailieu {
     public void setCopies(int copies) {
         this.copies = copies;
     }
+
+    @Override
+    public String toString() {
+        return "Tailieu{" +
+                "code=" + code +
+                ", publisher='" + publisher + '\'' +
+                ", copies=" + copies +
+                '}';
+    }
 }

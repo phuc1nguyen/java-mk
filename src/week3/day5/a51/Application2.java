@@ -1,4 +1,6 @@
-package week3.day5.a51.models;
+package week3.day5.a51;
+
+import week3.day5.a51.models.CanBo;
 
 import java.util.Scanner;
 

@@ -2,16 +2,29 @@ package week4.day7;
 
 public class activity71 {
     public static void main(String[] args) {
-        int arr[] = new int[5];
-        arr[5] = 4;
-        System.out.println("arr[5] = " + arr[5]);
 
-        int zero = 0;
-        int average = 10 / zero;
-        System.out.println("Average = " + average);
+        try {
+            int arr[] = new int[5];
+            arr[5] = 4;
+            System.out.println("arr[5] = " + arr[5]);
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println("IndexOutOfBoundsException: " + e);
+        }
 
-        String obj = null;
-        System.out.println(obj.length());
+        try {
+            int zero = 0;
+            int average = 10 / zero;
+            System.out.println("Average = " + average);
+        } catch (ArithmeticException e) {
+            System.out.println("ArithmeticException: " + e);
+        }
+
+        try {
+            String obj = null;
+            System.out.println(obj.length());
+        } catch (NullPointerException e) {
+            System.out.println("NullPointerException: " + e);
+        }
 
         System.out.println("Finished!");
     }

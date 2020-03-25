@@ -4,7 +4,6 @@ package week3.day5.a51;
 import week3.day5.a51.models.CanBo;
 
 public class QLCB extends QLCBInterface {
-
     @Override
     public CanBo addCanBo(String name, int age, String gender, String add){
         CanBo cb = new CanBo();

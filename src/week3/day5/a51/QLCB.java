@@ -17,7 +17,8 @@ public class QLCB extends QLCBInterface {
     @Override
     public CanBo searchByName(String name, CanBo[] cbList) {
         for(CanBo cb:cbList) {
-            if(cb.getName().equals(name)) return cb;
+            if(cb.getName().equals(name))
+                return cb;
         }
         return null;
     }
@@ -25,7 +26,8 @@ public class QLCB extends QLCBInterface {
     @Override
     public void displayCanBoList(CanBo[] cbList){
         for (CanBo cb:cbList) {
-            if (cb != null) System.out.println(cb.getName());
+            if (cb != null)
+                System.out.println(cb.getName());
         }
     }
 }

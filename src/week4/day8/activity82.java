@@ -1,13 +1,13 @@
+/*Write a Java program to insert an element into the array list at the x position*/
+
 package week4.day8;
 
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.Scanner;
+import java.util.*;
 
 public class activity82 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        LinkedList<String> yourList = new LinkedList<>();
+        List<String> yourList = new LinkedList<>();
         yourList.add(0, "Red");
         yourList.add(1, "Green");
         yourList.add(2, "Orange");

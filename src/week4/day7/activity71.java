@@ -1,3 +1,5 @@
+/*Thực hiện bắt hết các exception có thể cho đoạn lệnh sau*/
+
 package week4.day7;
 
 public class activity71 {

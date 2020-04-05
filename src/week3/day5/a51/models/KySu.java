@@ -6,6 +6,14 @@ public class KySu extends CanBo {
     public KySu() {
     }
 
+    public KySu(CanBo cb, String major) {
+        this.setName(cb.getName());
+        this.setAge(cb.getAge());
+        this.setGender(cb.getGender());
+        this.setAddress(cb.getAddress());
+        this.major = major;
+    }
+
     public String getMajor() {
         return major;
     }

@@ -1,7 +1,6 @@
 package HackerRank;
 
-import java.util.LinkedList;
-import java.util.Scanner;
+import java.util.*;
 
 public class JavaList {
     public static void main(String[] args) {

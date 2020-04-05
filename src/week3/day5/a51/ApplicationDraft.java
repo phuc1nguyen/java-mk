@@ -1,10 +1,11 @@
+/*
 package week3.day5.a51;
 
 import week3.day5.a51.models.*;
 
 import java.util.Scanner;
 
-public class Application {
+public class ApplicationDraft {
     private static CanBo[] congNhanArray;
     private static CanBo[] kySuArray;
     private static CanBo[] nhanVienArray;
@@ -12,7 +13,6 @@ public class Application {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         //Cong nhan cho truoc
-
 
         System.out.println("1. Them can bo");
         System.out.println("2. Tim kiem theo ho ten");
@@ -26,7 +26,10 @@ public class Application {
                 sc.nextLine();
             }
             i = sc.nextInt();
-        } while (i<1 || i>3);
+        } while (i < 1 || i > 3);
+
+        String s = "";
+
 
         //Nhap thong tin can bo
         QLCB ql = new QLCB();
@@ -83,7 +86,8 @@ public class Application {
                 } else System.out.println("Nhap sai. Chay lai chuong trinh.");
                 break;
 
-            /*case 2:     //Tim kiem theo ho ten
+            */
+/*case 2:     //Tim kiem theo ho ten
                 System.out.println("1. Cong nhan");
                 System.out.println("2. Ky su");
                 System.out.println("3. Nhan vien");
@@ -97,10 +101,12 @@ public class Application {
                 } else if (type2 == 3) {
 
                 } else System.out.println("Nhap sai. Chay lai chuong trinh.");
-                break;*/
+                break;*//*
+
 
             case 3:     //Hien thi danh sach can bo
-                System.out.println("1. Cong nhan");
+                */
+/*System.out.println("1. Cong nhan");
                 System.out.println("2. Ky su");
                 System.out.println("3. Nhan vien");
                 System.out.print("Chon loai danh sach can bo muon hien thi (1-3): ");
@@ -110,20 +116,24 @@ public class Application {
                 else if (type3 == 2) ql.displayCanBoList(kySuArray);
                 else if (type3 == 3) ql.displayCanBoList(nhanVienArray);
                 else System.out.println("Nhap sai. Chay lai chuong trinh.");
-                break;
+                break;*//*
+
 
             default:
                 return;
         }
 
         //Tim kiem can bo theo ten
-        /*CanBo cb = ql.searchByName("Nguyen Tuan Phuc", congNhanArray);
+        */
+/*CanBo cb = ql.searchByName("Nguyen Tuan Phuc", congNhanArray);
         if (cb == null) {
             System.out.println("Khong tim thay can bo.");
         } else {
             System.out.println("Tim thay can bo co ten la " + cb.getName());
-        }*/
+        }*//*
+
 
 
     }
 }
+*/

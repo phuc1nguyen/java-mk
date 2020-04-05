@@ -15,19 +15,17 @@ public class activity34 {
         int[] arr = new int[n];
 
         System.out.println("Nhap mang so nguyen: ");
-        for (int i=0; i<arr.length; ++i) {
-            arr[i] = sc.nextInt();
-        }
+        for (int i=0; i<arr.length; ++i) arr[i] = sc.nextInt();
 
         System.out.println("Chieu dai moi cua mang la: " + array_sort(arr));
     }
 
-    public static int array_sort(int[] nums) {              //??
-        int temp = 1;
+    public static int array_sort(int[] nums) {
+        int arrLength = 1;
         for (int i=1; i<nums.length; ++i) {
-            if (nums[i] != nums[temp-1])
-                nums[temp++] = nums[i];
+            if (nums[i] != nums[arrLength-1])
+                nums[arrLength++] = nums[i];
         }
-        return temp;
+        return arrLength;
     }
 }

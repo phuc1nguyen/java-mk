@@ -6,6 +6,14 @@ public class NhanVien extends CanBo {
     public NhanVien() {
     }
 
+    public NhanVien(CanBo cb, String job) {
+        this.setName(cb.getName());
+        this.setAge(cb.getAge());
+        this.setGender(cb.getGender());
+        this.setAddress(cb.getAddress());
+        this.job = job;
+    }
+
     public String getJob() {
         return job;
     }

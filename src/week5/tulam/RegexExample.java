@@ -11,7 +11,5 @@ public class RegexExample {
         System.out.println(test);
         test = test.replaceAll("\\.", "");
         System.out.println(test);
-
-
     }
 }

@@ -3,6 +3,8 @@ package week3.day5.a51;
 
 import week3.day5.a51.models.CanBo;
 
+import java.util.List;
+
 public class QLCB extends QLCBInterface {
     @Override
     public CanBo addCanBo(String name, int age, String gender, String add){
@@ -15,19 +17,21 @@ public class QLCB extends QLCBInterface {
     }
 
     @Override
-    public CanBo searchByName(String name, CanBo[] cbList) {
+    public CanBo searchByNameOrAge(String name, int age, List<CanBo> cbList) {
         for(CanBo cb:cbList) {
             if(cb.getName().equals(name))
+                return cb;
+            else if (cb.getAge() == age)
                 return cb;
         }
         return null;
     }
 
     @Override
-    public void displayCanBoList(CanBo[] cbList){
+    public void displayCanBoList(List<CanBo> cbList){
         for (CanBo cb:cbList) {
             if (cb != null)
-                System.out.println(cb.getName());
+                System.out.println(cb.toString());
         }
     }
 }

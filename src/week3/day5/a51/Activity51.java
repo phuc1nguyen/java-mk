@@ -11,6 +11,9 @@ import java.util.Scanner;
 public class Activity51 {
     private static Scanner sc = new Scanner(System.in);
     private static QLCB qlcb = new QLCB();
+    private static LinkedList<CanBo> cn = new LinkedList<>();
+    private static LinkedList<CanBo> ks = new LinkedList<>();
+    private static LinkedList<CanBo> nv = new LinkedList<>();
 
     private static int n;
     private static String inputText;
@@ -28,18 +31,19 @@ public class Activity51 {
     }
 
     private static void action() {
-        System.out.println("Please pick one of these following actions: ");
+        System.out.println("\nPlease pick one of these following actions: ");
         System.out.println("1. Add new can bo.");
-        System.out.println("2. Find can bo by their name or age.");
-        System.out.println("3. Display your can bo list.");
-        System.out.println("4. Quit program.");
+        System.out.println("2. Find can bo by their name.");
+        System.out.println("3. Find can bo by their age.");
+        System.out.println("4. Display your can bo list.");
+        System.out.println("5. Quit program.");
 
         do {
             while (!sc.hasNextInt()) {
                 System.out.print("Error. Please enter a number from 1 to 3: ");
                 sc.nextLine();
             } n = sc.nextInt();
-        } while (n < 1 || n > 3);
+        } while (n < 1 || n > 5);
 
         switch (n) {
             case 1:
@@ -47,10 +51,14 @@ public class Activity51 {
                 action();
                 break;
             case 2:
-                searchByNameOrAge();
+                searchByName();
                 action();
                 break;
             case 3:
+                searchByAge();
+                action();
+                break;
+            case 4:
                 displayCanBoList();
                 action();
                 break;
@@ -75,7 +83,6 @@ public class Activity51 {
 
         switch (n) {
             case 1:
-                LinkedList<CongNhan> cn = new LinkedList<>();
                 System.out.print("Nhap so cong nhan muon them thong tin: ");
                 int x = sc.nextInt();
                 for (int i = 0; i < x; ++i) {
@@ -94,13 +101,12 @@ public class Activity51 {
                 System.out.println();
                 break;
             case 2:
-                LinkedList<KySu> ks = new LinkedList<>();
-                System.out.println("Nhap so ky su muon them thong tin: ");
+                System.out.print("Nhap so ky su muon them thong tin: ");
                 int y = sc.nextInt();
                 for (int i = 0; i < y; ++i) {
                     sc.nextLine();
 
-                    System.out.print("Nhap thong tin (ten, tuoi, gioi tinh, dia chi) ky su " + (i+1) + ":");
+                    System.out.println("Nhap thong tin (ten, tuoi, gioi tinh, dia chi) ky su " + (i+1) + ":");
                     inputText = sc.nextLine();
                     String[] line = inputText.split(", ");
                     CanBo kySu = qlcb.addCanBo(line[0], Integer.valueOf(line[1]), line[2], line[3]);
@@ -113,13 +119,12 @@ public class Activity51 {
                 System.out.println();
                 break;
             case 3:
-                LinkedList<NhanVien> nv = new LinkedList<>();
                 System.out.print("Nhap so nhan vien muon them thong tin: ");
                 int z = sc.nextInt();
                 for (int i = 0; i < z; ++i) {
                     sc.nextLine();
 
-                    System.out.println("Nhap thong tin nhan vien " + (i+1) + ": ");
+                    System.out.println("Nhap thong tin (ten, tuoi, gioi tinh, dia chi) nhan vien " + (i+1) + ":");
                     inputText = sc.nextLine();
                     String[] line = inputText.split(", ");
                     CanBo nhanVien = qlcb.addCanBo(line[0], Integer.valueOf(line[1]), line[2], line[3]);
@@ -136,7 +141,42 @@ public class Activity51 {
         }
     }
 
-    private static void searchByNameOrAge() {     // Chon loai can bo truoc roi moi tim theo loai
+    private static void searchByName() {     // Chon loai can bo truoc roi moi tim theo loai
+        System.out.println("\nPlease choose can bo type:");
+        System.out.println("1. Cong Nhan.");
+        System.out.println("2. Ky Su.");
+        System.out.println("3. Nhan Vien.");
+
+        do {
+            while (!sc.hasNextInt()) {
+                System.out.print("Error. Please enter a number from 1 to 3: ");
+                sc.next();
+            } n = sc.nextInt();
+        } while (n < 1 || n > 3);
+        sc.nextLine();
+
+        switch (n) {
+            case 1:
+                System.out.print("Nhap ten cong nhan ban muon tim: ");
+                name = sc.nextLine();
+                System.out.println(qlcb.searchByName(name, cn).toString());
+                break;
+            case 2:
+                System.out.print("Nhap ten ky su ban muon tim: ");
+                name = sc.nextLine();
+                System.out.println(qlcb.searchByName(name, ks).toString());
+                break;
+            case 3:
+                System.out.print("Nhap ten nhan vien ban muon tim: ");
+                name = sc.nextLine();
+                System.out.println(qlcb.searchByName(name, nv).toString());
+                break;
+            default:
+                return;
+        }
+    }
+
+    private static void searchByAge() {
         System.out.println("\nPlease choose can bo type:");
         System.out.println("1. Cong Nhan.");
         System.out.println("2. Ky Su.");
@@ -149,27 +189,37 @@ public class Activity51 {
             } n = sc.nextInt();
         } while (n < 1 || n > 3);
 
-
-        System.out.println("\nDo you want to make a search by name or age?");
+        switch (n) {
+            case 1:
+                System.out.print("Nhap tuoi cong nhan ban muon tim: ");
+                age = sc.nextInt();
+                System.out.println(qlcb.searchByAge(age, cn).toString());
+                break;
+            case 2:
+                System.out.print("Nhap tuoi ky su ban muon tim: ");
+                age = sc.nextInt();
+                System.out.println(qlcb.searchByAge(age, ks).toString());
+                break;
+            case 3:
+                System.out.println("Nhap tuoi nhan vien ban muon tim: ");
+                age = sc.nextInt();
+                System.out.println(qlcb.searchByAge(age, nv).toString());
+                break;
+            default:
+                return;
+        }
     }
 
     private static void displayCanBoList() {      // Hien thi tat ca loai can bo tren cung 1 danh sach
-        System.out.println("\nPlease choose can bo type:");
-        System.out.println("1. Cong Nhan.");
-        System.out.println("2. Ky Su.");
-        System.out.println("3. Nhan Vien.");
-
-        do {
-            while (!sc.hasNextInt()) {
-                System.out.print("Error. Please enter a number from 1 to 3: ");
-                sc.next();
-            } n = sc.nextInt();
-        } while (n < 1 || n > 3);
-
-
+        LinkedList<LinkedList<CanBo>> cb = new LinkedList<LinkedList<CanBo>>();
+        cb.add(cn);
+        cb.add(ks);
+        cb.add(nv);
+        System.out.println("Danh sach can bo: ");
+        qlcb.displayCanBoList(cb);
     }
 
     private static void quitProgram() {       // Thoat chuong trinh
-        return;
+        System.out.println("Thank you!");
     }
 }

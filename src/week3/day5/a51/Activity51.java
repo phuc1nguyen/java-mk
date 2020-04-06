@@ -34,16 +34,15 @@ public class Activity51 {
         System.out.println("\nPlease pick one of these following actions: ");
         System.out.println("1. Add new can bo.");
         System.out.println("2. Find can bo by their name.");
-        System.out.println("3. Find can bo by their age.");
-        System.out.println("4. Display your can bo list.");
-        System.out.println("5. Quit program.");
+        System.out.println("3. Display your can bo list.");
+        System.out.println("4. Quit program.");
 
         do {
             while (!sc.hasNextInt()) {
                 System.out.print("Error. Please enter a number from 1 to 3: ");
                 sc.nextLine();
             } n = sc.nextInt();
-        } while (n < 1 || n > 5);
+        } while (n < 1 || n > 4);
 
         switch (n) {
             case 1:
@@ -55,10 +54,6 @@ public class Activity51 {
                 action();
                 break;
             case 3:
-                searchByAge();
-                action();
-                break;
-            case 4:
                 displayCanBoList();
                 action();
                 break;
@@ -170,40 +165,6 @@ public class Activity51 {
                 System.out.print("Nhap ten nhan vien ban muon tim: ");
                 name = sc.nextLine();
                 System.out.println(qlcb.searchByName(name, nv).toString());
-                break;
-            default:
-                return;
-        }
-    }
-
-    private static void searchByAge() {
-        System.out.println("\nPlease choose can bo type:");
-        System.out.println("1. Cong Nhan.");
-        System.out.println("2. Ky Su.");
-        System.out.println("3. Nhan Vien.");
-
-        do {
-            while (!sc.hasNextInt()) {
-                System.out.print("Error. Please enter a number from 1 to 3: ");
-                sc.next();
-            } n = sc.nextInt();
-        } while (n < 1 || n > 3);
-
-        switch (n) {
-            case 1:
-                System.out.print("Nhap tuoi cong nhan ban muon tim: ");
-                age = sc.nextInt();
-                System.out.println(qlcb.searchByAge(age, cn).toString());
-                break;
-            case 2:
-                System.out.print("Nhap tuoi ky su ban muon tim: ");
-                age = sc.nextInt();
-                System.out.println(qlcb.searchByAge(age, ks).toString());
-                break;
-            case 3:
-                System.out.println("Nhap tuoi nhan vien ban muon tim: ");
-                age = sc.nextInt();
-                System.out.println(qlcb.searchByAge(age, nv).toString());
                 break;
             default:
                 return;

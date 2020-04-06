@@ -27,15 +27,6 @@ public class QLCB extends QLCBInterface {
     }
 
     @Override
-    public CanBo searchByAge(int age, List<CanBo> cbList) {
-        for (CanBo cb:cbList) {
-            if (age == cb.getAge())
-                return cb;
-        }
-        return null;
-    }
-
-    @Override
     public void displayCanBoList(LinkedList<LinkedList<CanBo>> cbList){
         /*for (LinkedList<CanBo> cb:cbList) {
             if (cb != null)

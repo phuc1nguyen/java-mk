@@ -15,7 +15,7 @@ public class activity92 {
         File[] listFiles = dirFolder.listFiles(new FilenameFilter() {
             @Override
             public boolean accept(File dir, String name) {
-                if (name.toLowerCase().endsWith(".txt")) return true;
+                if (name.toLowerCase().endsWith(".jpg")) return true;
                 else return false;
             }
         });

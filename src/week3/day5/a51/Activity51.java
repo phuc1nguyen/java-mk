@@ -15,15 +15,8 @@ public class Activity51 {
     private static LinkedList<CanBo> ks = new LinkedList<>();
     private static LinkedList<CanBo> nv = new LinkedList<>();
 
-    private static int n;
-    private static String inputText;
-    private static String name;
-    private static int age;
-    private static String gender;
-    private static String add;
-    private static int level;
-    private static String major;
-    private static String job;
+    private static int n, age, level;
+    private static String inputText, name, gender, add, major, job;
 
     public static void main(String[] args) {
         action();

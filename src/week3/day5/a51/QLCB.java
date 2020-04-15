@@ -8,7 +8,7 @@ import java.util.List;
 
 public class QLCB extends QLCBInterface {
     @Override
-    public CanBo addCanBo(String name, int age, String gender, String add){
+    public CanBo addCanBo(String name, int age, String gender, String add) {
         CanBo cb = new CanBo();
         cb.setName(name);
         cb.setAge(age);

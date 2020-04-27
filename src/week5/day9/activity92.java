@@ -12,14 +12,14 @@ public class activity92 {
         System.out.print("Input your pathname: ");
         String s = sc.nextLine();
         File dirFolder = new File(s);
-        File[] listFiles = dirFolder.listFiles(new FilenameFilter() {
+        File[] listF = dirFolder.listFiles(new FilenameFilter() {
             @Override
             public boolean accept(File dir, String name) {
                 if (name.toLowerCase().endsWith(".jpg")) return true;
                 else return false;
             }
         });
-        for (File item : listFiles) {
+        for (File item : listF) {
             System.out.println(item);
         }
     }

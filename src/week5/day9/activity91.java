@@ -1,4 +1,4 @@
-/*Write a Java program to get a list of all file/directory names from the given*/
+/*Write a Java program to get a list of all file/directory names from the given folder*/
 
 package week5.day9;
 
@@ -11,9 +11,9 @@ public class activity91 {
         System.out.print("Input your pathname: ");
         String s = sc.nextLine();
         File dirFolder = new File(s);
-        File[] listFiles = dirFolder.listFiles();
+        File[] listF = dirFolder.listFiles();
 
-        for (File file : listFiles) {
+        for (File file : listF) {
             System.out.println(file.getName());
             System.out.println(file.getAbsolutePath());
             System.out.println(file.getTotalSpace());

@@ -1,4 +1,4 @@
-package JavaSwing.Model;
+package QuanLySinhVien.JavaSwing.Model;
 
 public class Student {
     private String name;

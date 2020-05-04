@@ -24,7 +24,7 @@ public class Activity52 {
         sc.close();
     }
 
-    public static void action() {
+    private static void action() {
         System.out.println("\n1. Them tai lieu moi.");
         System.out.println("2. Xoa tai lieu.");
         System.out.println("3. Hien thi danh sach tai lieu.");
@@ -65,7 +65,7 @@ public class Activity52 {
         }
     }
 
-    public static void themTaiLieu() {
+    private static void themTaiLieu() {
         System.out.println("Co 3 loai tai lieu:");
         System.out.println("1. Sach.");
         System.out.println("2. Bao.");
@@ -134,25 +134,25 @@ public class Activity52 {
         }
     }
 
-    public static void xoaTaiLieu() {
+    private static void xoaTaiLieu() {
         System.out.print("Nhap ma tai lieu can xoa: ");
         maTaiLieu = sc.nextInt();
         qltl.xoaTaiLieu(maTaiLieu, danhSachTaiLieu);
         System.out.println("Da xoa tai lieu.");
     }
 
-    public static void hienThiTaiLieu() {
+    private static void hienThiTaiLieu() {
         System.out.println("Tai lieu cua ban: ");
         qltl.hienThiTL(danhSachTaiLieu);
     }
 
-    public static void timKiemTaiLieu() {
+    private static void timKiemTaiLieu() {
         System.out.print("Nhap ma tai lieu can tim: ");
         maTaiLieu = sc.nextInt();
         System.out.println("Tai lieu ung voi ma " + maTaiLieu + " la: " + qltl.timKiemTL(maTaiLieu, danhSachTaiLieu).toString());
     }
 
-    public static void thoatChuongTrinh() {
+    private static void thoatChuongTrinh() {
         System.out.println("Thank you!");
     }
 }
